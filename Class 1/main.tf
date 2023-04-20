@@ -46,3 +46,7 @@ output bucket_info {
 output key_info {
     value = aws_key_pair.deployer.arn
 }
+
+resource "aws_s3_bucket" "bucket" {
+  bucket_prefix = "adilet-bicket-7777"
+}
