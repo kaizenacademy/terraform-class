@@ -1,6 +1,10 @@
 #!/bin/bash
 
-sudo apt update -y
-sudo apt install apache2 -y
-sudo systemctl start apache2
-sudo systemctl enable apache2
+
+sudo apt-get update
+sudo apt-get install -y curl openssh-server ca-certificates tzdata perl
+
+
+curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash
+
+sudo apt-get install gitlab-ee
